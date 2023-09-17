@@ -302,7 +302,7 @@ async def inline_alive(
         status,
         status1,
         remaining_days,
-        ayra_bot.dc_id
+        ayra_bot.dc_id,
         ping,
         f"{ayra_version} [{HOSTED_ON}]",
         AyraVer,
