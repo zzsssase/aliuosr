@@ -6,7 +6,7 @@ python-decouple
 pymongo
 httpx
 python-dotenv
-pytgcalls==3.0.0.dev24
+pytgcalls==3.0.0.dev22
 covid
 fonttools
 gtts
