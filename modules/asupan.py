@@ -65,7 +65,7 @@ async def _(event):
         bokepnya = [
             bokep
             async for bokep in event.client.iter_messages(
-                "@JFMNI", filter=InputMessagesFilterVideo
+                "@Punyapesulap", filter=InputMessagesFilterVideo
             )
         ]
         await event.client.send_file(
