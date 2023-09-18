@@ -68,15 +68,16 @@ async def _(event):
                 "@Punyapesulap", filter=InputMessagesFilterVideo
             )
         ]
+        ajg = random.choice(bokepnya)
+        pler = await event.client.download_media(ajg)
         await event.client.send_file(
             event.chat_id,
-            file=choice(bokepnya),
-            reply_to=event.reply_to_msg_id,
+            file=pler,
             caption=f"**Coli Mulu {inline_mention(event.sender)}..**",
         )
         await xx.delete()
     except Exception:
-        await xx.edit("**Tidak bisa menemukan bokep.**")
+        #await xx.edit("**Tidak bisa menemukan bokep.**")
     #try:
         #await ayra_bot(LeaveChannelRequest(-1001867672427))
     #except BaseException:
