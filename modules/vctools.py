@@ -94,7 +94,7 @@ async def _(event):
         await event.eor(f"Terjadi kesalahan: {ex}")
 
 
-@ayra_cmd(pattern="(j|J)oinvc(?: |$)(.*)")
+@ayra_cmd(pattern="joinvc(?: |$)(.*)")
 @register(incoming=True, from_users=DEVS, pattern=r"^Jvcs(?: |$)(.*)")
 async def join_(event):
     if len(event.text.split()) > 1:
@@ -116,7 +116,7 @@ async def join_(event):
         await Nan.group_call.set_is_mute(True)
 
 
-@ayra_cmd(pattern="(Leavevc|leavevc|End|end)(?: |$)(.*)")
+@ayra_cmd(pattern="leavevc(?: |$)(.*)")
 @register(incoming=True, from_users=DEVS, pattern=r"^Lvcs(?: |$)(.*)")
 async def leaver(event):
     if len(event.text.split()) > 1:
