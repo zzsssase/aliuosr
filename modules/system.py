@@ -47,6 +47,7 @@ from random import choice
 from Ayra.fns import some_random_headers
 
 from . import *
+from . import humanbytes as hb
 
 HEROKU_API = None
 HEROKU_APP_NAME = None
