@@ -259,7 +259,7 @@ async def _(event):
 
 @ayra_cmd(pattern=r"[gG][cC][sS]")
 async def _(event):
-    if event.chat_id in BLACKLIST_CHAT:
+    if event.chat_id in NOSPAM_CHAT:
         return await event.eor(event, "Perintah ini Dilarang digunakan di Group ini")
     await event.client.send_message(
         event.chat_id,
