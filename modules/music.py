@@ -26,13 +26,13 @@
 ๏ **Perintah:** `mutevc`
 ◉ **Keterangan:** Bisukan musik.
 
-๏ **Perintah:** `pause`
+๏ **Perintah:** `pausevc`
 ◉ **Keterangan:** Pause musik.
 
 ๏ **Perintah:** `unmutevc`
 ◉ **Keterangan:** Unmute musik.
 
-๏ **Perintah:** `resume`
+๏ **Perintah:** `resumevc`
 ◉ **Keterangan:** Resume musik.
 
 ๏ **Perintah:** `addauth`
