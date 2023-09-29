@@ -6,10 +6,10 @@
 # <https://www.github.com/senpai80/Ayra/blob/main/LICENSE/>.
 
 """
-✘ **Bantuan Untuk Afk**
+✘ **قائمة اوامر الحظر والرفع**
 
-๏ **Perintah:** `promote` <balas ke pengguna/username>
-◉ **Keterangan:** Jadikan pengguna sebagai admin.
+• **Perintah:** `.مشرف` + يوزر المستخدم او بالرد 
+◉ **Keterangan:** أمر رفع المستخدم مشرفا.
 
 ๏ **Perintah:** `promote -f` <balas ke pengguna/username>
 ◉ **Keterangan:** Jadikan pengguna sebagai admin akses penuh.
