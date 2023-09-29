@@ -10,19 +10,19 @@ authors:
   - riz
 
 # commons
-com_1: "`Processing...`"
-com_2: "`Searching...`"
-com_3: "`Invalid Input`"
-com_4: "`Unsupported Media..`"
-com_5: "`Downloading...`"
-com_6: "`Uploading...`"
-com_7: "`Sorry, an ERROR has occurred`"
+com_1: "`جاري التحميل...`"
+com_2: "`جاري البحث...`"
+com_3: "`خطاء حاول مجددا`"
+com_4: "`الوسائط غير المدعومة..`"
+com_5: "`جارى التحميل...`"
+com_6: "`جارٍ التحميل...`"
+com_7: "`عذرا، حدث خطأ`"
 
-adzan1: "**City Not Found** `{}`"
+adzan1: "**لم يتم العثور على المدينة** `{}`"
 
 # carbon
-carbon_1: "Decarbonized by {}"
-carbon_2: "`Reply to a readable message or file..`"
+carbon_1: "خالي من الكربون بواسطة {}"
+carbon_2: "`الرد على رساله او ملف قابل للقراءه..`"
 carbon_3: "`Provide Custom Color to make Carbon...`"
 
 # vc tools
