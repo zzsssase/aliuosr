@@ -6,7 +6,7 @@
         "Telethon",
         "Pyrogram"
     ],
-    "repository": "https://github.com/naya1503/Naya-Userbot",
+    "repository": "https://github.com/asaaqa/Naya-Userbot",
     "success_url": "https://t.me/rizzvbss",
     "stack": "container",
     "env": {
