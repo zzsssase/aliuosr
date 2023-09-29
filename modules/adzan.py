@@ -23,14 +23,15 @@ async def cek(event):
         return await eor(event, get_string("adzan1").format(LOKASI))
     result = json.loads(request.text)
     catresult = f"""
-**Jadwal Shalat Hari Ini:**
-**📆 Tanggal **`{result['items'][0]['date_for']}`
-**📍 Kota** `{result['query']}` | `{result['country']}`
-**Terbit  : **`{result['items'][0]['shurooq']}`
-**Subuh : **`{result['items'][0]['fajr']}`
-**Zuhur  : **`{result['items'][0]['dhuhr']}`
-**Ashar  : **`{result['items'][0]['asr']}`
-**Maghrib : **`{result['items'][0]['maghrib']}`
-**Isya : **`{result['items'][0]['isha']}`
+**مواقيت الصلاة كالتالي:**
+**📆 تاريخ **`{result['items'][0]['date_for']}`
+**📍 المدينة** `{result['query']}` | `{result['country']}`
+**الفجر  : **`{result['items'][0]['shurooq']}`
+**الصباح : **`{result['items'][0]['fajr']}`
+**الظهر  : **`{result['items'][0]['dhuhr']}`
+**العصر  : **`{result['items'][0]['asr']}`
+**المغرب : **`{result['items'][0]['maghrib']}`
+**العشاء : **`{result['items'][0]['isha']}`
+**سورس الامبراطور 🇾🇪**
 """
     await eor(event, catresult)
