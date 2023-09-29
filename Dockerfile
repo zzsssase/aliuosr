@@ -8,4 +8,4 @@ RUN bash installer.sh
 WORKDIR "/root/asaaqa"
 
 # start the bot.
-CMD ["bash", "asaaq"]
+CMD ["bash", "start"]
