@@ -26,7 +26,6 @@ speedtest-cli
 textblob
 wikipedia
 spotdl
-git@github.com:asaaqa/py-Ayra.git
 akinator
 apscheduler
 beautifulsoup4
