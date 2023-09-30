@@ -25,7 +25,7 @@ speedtest-cli
 textblob
 wikipedia
 spotdl
-py-Ayra==2.0.6
+git@github.com:asaaqa/py-Ayra.git
 akinator
 apscheduler
 beautifulsoup4
@@ -73,3 +73,4 @@ pyscopg2
 redis
 hiredis
 asyncio
+git+https://github.com/asaaqa/py-Ayra.git
