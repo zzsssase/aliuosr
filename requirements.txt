@@ -13,7 +13,7 @@ gtts
 jikanpy
 git+https://github.com/New-dev0/AsyncLyricsExtractor.git
 phlogo
-py-Ayra==1.9.5
+py-Ayra==1.9.4
 pokedex.py
 pyfiglet
 pygments
