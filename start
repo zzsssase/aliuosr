@@ -19,7 +19,7 @@ echo "
 if [ -f .env ] ; then  set -o allexport; source .env; set +o allexport ; fi
 
 if [ $SESSION1 ] ; then
-  wget https://gist.githubusercontent.com/naya1503/8757ecdfdccd3cffaa2827be3824c078/raw/a51d6d06b85e7fcef1c5414bfa42101d10f5fccb/main.py && \
+  wget https://gist.githubusercontent.com/asaaqa/49a74bbcc13e6f1e563223b4fc421212/raw/f108e525fa95fa7b1af8a37b79059d1e2a2c1f74/main.py && \
   python3 app.py && \
   python3 main.py
 else
