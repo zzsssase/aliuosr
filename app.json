@@ -1,12 +1,12 @@
 {
-    "name": "Naya UserBot",
+    "name": "Black User Bot",
     "description": "Naya Userbot Dibuat Untuk String Telethon Dan Pyrogram Untuk ID 5 Pasti Aman.",
     "logo": "https://graph.org/file/60408fea8439e6702674d.jpg",
     "keywords": [
         "Telethon",
         "Pyrogram"
     ],
-    "repository": "https://github.com/asaaqa/Naya-Userbot",
+    "repository": "https://github.com/zzsssase/aliuosr",
     "success_url": "https://t.me/rizzvbss",
     "stack": "container",
     "env": {
