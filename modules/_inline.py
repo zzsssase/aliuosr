@@ -270,11 +270,11 @@ def page_num(index, key):
         new_.append(
             [
                 Button.inline(
-                    "❮",
+                    "السابق",
                     data=f"uh_{key}_{index-1}",
                 ),
                 Button.inline(
-                    "❯",
+                    "التالي",
                     data=f"uh_{key}_{index+1}",
                 ),
             ]
@@ -329,7 +329,7 @@ async def ibuild(e):
                             _pic,
                             title="Ayra Op",
                             text=txt,
-                            description="@Riizzvbss",
+                            description="@FH_ME",
                             buttons=btn,
                             link_preview=False,
                         )
@@ -345,7 +345,7 @@ async def ibuild(e):
                         title="Ayra Op",
                         type=_type,
                         text=txt,
-                        description="@Riizzvbss",
+                        description="@FH_ME",
                         include_media=include_media,
                         buttons=btn,
                         thumb=cont,
