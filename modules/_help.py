@@ -21,7 +21,7 @@ _main_help_menu = [
 ]
 
 
-@ayra_cmd(pattern="مساعده( (.*)|$)")
+@ayra_cmd(pattern="الاوامر( (.*)|$)")
 async def _help(ayra):
     plug = ayra.pattern_match.group(1).strip()
     chat = await ayra.get_chat()
@@ -39,7 +39,7 @@ async def _help(ayra):
                     for d in LIST[plug]:
                         x += HNDLR + d
                         x += "\n"
-                    x += "\n© @KynanSupport"
+                    x += "\n© @FH_KP"
                     await ayra.eor(x)
                 except BaseException:
                     file = None
@@ -70,7 +70,7 @@ async def _help(ayra):
                     if file in HELP["Official"]:
                         for i in HELP["Official"][file]:
                             output += i
-                    output += "\n© @KynanSupport"
+                    output += "\n© @FH_KP"
                     await ayra.eor(output)
         except BaseException as er:
             LOGS.exception(er)
