@@ -5,10 +5,10 @@
 # PLease read the GNU Affero General Public License in
 # <https://www.github.com/senpai80/Ayra/blob/main/LICENSE/>.
 """
-✘ **اوامــر التلكراف ميديا**
+» **اوامــر التلكراف ميديا**
 
-๏  `تلكراف ميديا`
-◉ **الاستخدام:** يستخدم لاستخراج رابط الميديا**
+»  `تلكراف ميديا`
+» **الاستخدام **يستخدم لاستخراج رابط الميديا**
 """
 
 import os
@@ -62,7 +62,7 @@ async def telegraphcmd(event):
         if "document" not in dar:
             try:
                 nn = f"https://graph.org{uf(getit)[0]}"
-                amsg = f" الرابط[اضغط لنسخ]({nn}) !"
+                amsg = f" تم انشاء الرابط «[اضغط لنسخ]({nn}) !"
             except Exception as e:
                 amsg = f"Error : {e}"
             os.remove(getit)
