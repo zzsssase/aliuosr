@@ -5,10 +5,10 @@
 # PLease read the GNU Affero General Public License in
 # <https://www.github.com/senpai80/Ayra/blob/main/LICENSE/>.
 """
-✘ **Bantuan Untuk Telegraph**
+✘ **اوامــر التلكراف ميديا**
 
-๏ **Perintah:** `tg`
-◉ **Keterangan:** Upload File Atau Teks Ke Telegraph
+๏  `تلكراف ميديا`
+◉ **الاستخدام:** يستخدم لاستخراج رابط الميديا**
 """
 
 import os
@@ -36,7 +36,7 @@ _copied_msg = {}
 
 
 @ayra_cmd(
-    pattern="[tT][gG]( (.*)|$)",
+    pattern="تلكراف ميديا( (.*)|$)",
 )
 async def telegraphcmd(event):
     xx = await event.eor(get_string("com_1"))
@@ -62,7 +62,7 @@ async def telegraphcmd(event):
         if "document" not in dar:
             try:
                 nn = f"https://graph.org{uf(getit)[0]}"
-                amsg = f"Uploaded to [Telegraph]({nn}) !"
+                amsg = f" الرابط[اضغط لنسخ]({nn}) !"
             except Exception as e:
                 amsg = f"Error : {e}"
             os.remove(getit)

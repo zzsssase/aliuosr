@@ -5,15 +5,15 @@
 # PLease read the GNU Affero General Public License in
 # <https://www.github.com/senpai80/Ayra/blob/main/LICENSE/>.
 """
-✘ **Bantuan Untuk Culik**
+**اوامــر إضافة الاعضاء**
 
-๏ **Perintah:** `invite` <id pengguna>
-◉ **Keterangan:** Culik 1 member.
+๏ `اضافه` 
+◉ **الاستخدام:**قم بكتابة الامر مع يوزر الشخص لإضافته للمجموعة**.
 
-๏ **Perintah:** `inviteall` <username grup>
-◉ **Keterangan:** Culik banyak member dari grup tersebut.
+๏ `ضيف` <
+◉ **الاستخدام:** يستخدم لنقل الأعضاء من جروب لجروب ثاني**.
 
-◉ **Notes:** Fitur Ini Dilarang Keras Untuk IDC 5 & 6 Karena Akun Anda Akan Ter-Deak.
+◉ **ملاحظة:** لا تستخدم اوامـر الاضافه اكثر من مره حتى تجنب الحظر**.
 """
 
 
@@ -63,7 +63,7 @@ async def get_chatinfo(event):
     return chat_info
 
 
-@ayra_cmd(pattern="invite(?: |$)(.*)")
+@ayra_cmd(pattern="اضافه(?: |$)(.*)")
 async def _(event):
     if event.fwd_from:
         return
@@ -108,7 +108,7 @@ async def _(event):
 # Copyright © Team Geez - Project
 
 
-@ayra_cmd(pattern="inviteall ?(.*)")
+@ayra_cmd(pattern="ضيف ?(.*)")
 async def get_users(event):
     ajgg = event.text[11:]
     chat_ajgg = ajgg.lower()

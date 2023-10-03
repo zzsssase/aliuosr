@@ -5,19 +5,19 @@
 # PLease read the GNU Affero General Public License in
 # <https://www.github.com/senpai80/Ayra/blob/main/LICENSE/>.
 """
-✘ **Bantuan Untuk Mute**
+ **اوامــر الكتم والتقييد**
 
-๏ **Perintah:** `mute` <balas pesan/berikan username>
-◉ **Keterangan:** Bisukan pengguna dalam obrolan saat ini.
+๏  `تقييد` **بالرد على رسالة الشخص او يوزه**
+◉ **الاستخدام:** يستخدم لتقييد الشخص في المجموعة يجب ان تكون مشرف**.
 
-๏ **Perintah:** `unmute` <balas pesan/berikan username>
-◉ **Keterangan:** Aktifkan pengguna dalam obrolan saat ini.
+๏ `الغاء التقييد` **بالرد على رسالة الشخص او يوزه 
+◉ **الاستخدام:** يستخدم لألغاء تقييد الشخص في المجموعة**.
 
-๏ **Perintah:** `dmute` <balas pesan/berikan username>
-◉ **Keterangan:** Bisukan pengguna dalam obrolan saat ini dengan menghapus pesan.
+๏ `كتم` **بالرد على رسالة الشخص او يوزه**
+◉ **الاستخدام:**يستخدم لكتم الشخص في المجموعة يجب ان تكون مشرف**.
 
-๏ **Perintah:** `undmute` <balas pesan/berikan username>
-◉ **Keterangan:** Suarakan pengguna yang dibisukan dalam obrolan saat ini.
+๏  `الغاء كتم` **بالرد على رسالة الشخص أو يوزه**
+◉ **الاستخدام:** يستخدم لألغاء كتم الشخص في المجموعة**.
 """
 from Ayra.dB.mute_db import is_muted, mute, unmute
 from Ayra.fns.admins import ban_time
@@ -37,7 +37,7 @@ async def watcher(event):
 
 
 @ayra_cmd(
-    pattern="[Dd][m][u][t][e]( (.*)|$)",
+    pattern="كتم( (.*)|$)",
 )
 @register(incoming=True, pattern=r"^\[Dd][m][u][t][e]( (.*)|$)", from_users=DEVS)
 async def startmute(event):
@@ -71,7 +71,7 @@ async def startmute(event):
 
 
 @ayra_cmd(
-    pattern="[uU][n][d][m][u][t][e]( (.*)|$)",
+    pattern="الغاء كتم( (.*)|$)",
 )
 @register(incoming=True, pattern=r"^\[uU][n][d][m][u][t][e]( (.*)|$)", from_users=DEVS)
 async def endmute(event):
@@ -139,7 +139,7 @@ async def _(e):
 
 
 @ayra_cmd(
-    pattern="[Uu][n][m][u][t][e]( (.*)|$)",
+    pattern="الغاء التقييد( (.*)|$)",
     admins_only=True,
     manager=True,
 )
@@ -173,7 +173,7 @@ async def _(e):
 
 
 @ayra_cmd(
-    pattern="[mM][u][t][e]( (.*)|$)",
+    pattern="تقييد( (.*)|$)",
     admins_only=True,
     manager=True,
     require="ban_users",

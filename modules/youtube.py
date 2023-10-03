@@ -5,13 +5,13 @@
 # PLease read the GNU Affero General Public License in
 # <https://www.github.com/senpai80/Ayra/blob/main/LICENSE/>.
 """
-✘ **Bantuan Untuk Youtube**
+ **اوامــر التحميل**
 
-๏ **Perintah:** Video
-◉ **Keterangan:** Unduh Video Dari Youtube.
+๏  تنزيل
+◉ **الاستخدام:** يستخدم لتحميـل الفيديو من اليوتيوب**.
 
-๏ **Perintah:** Song
-◉ **Keterangan:** Unduh Lagu Dari Youtube.
+๏ بحث
+◉ **الاستخدام:** يستخدم لتحميـل الاغانـي من اليوتيوب**.
 """
 import os
 from asyncio import get_event_loop
@@ -28,7 +28,7 @@ def run_sync(func, *args, **kwargs):
     return get_event_loop().run_in_executor(None, partial(func, *args, **kwargs))
 
 
-@ayra_cmd(pattern="(v|V)ideo( (.*)|$)")
+@ayra_cmd(pattern="تنزيل( (.*)|$)")
 async def yt_video(e):
     infomsg = await e.eor("`Processing...`")
     try:
@@ -82,7 +82,7 @@ async def yt_video(e):
             os.remove(files)
 
 
-@ayra_cmd(pattern="(s|S)ong( (.*)|$)")
+@ayra_cmd(pattern="بحث( (.*)|$)")
 async def yt_audio(e):
     infomsg = await e.eor("`Processing...`")
     try:

@@ -5,16 +5,16 @@
 # PLease read the GNU Affero General Public License in
 # <https://www.github.com/senpai80/Ayra/blob/main/LICENSE/>.
 """
-✘ **Bantuan Untuk Sudo**
+✘ **اوامــر المساعد**
 
-๏ **Perintah:** `addsudo`
-◉ **Keterangan:** Tambahkan Pengguna Sudo dengan membalas ke pengguna atau menggunakan <spasi> userid yang terpisah
+๏  `رفع مطور`
+◉ **الاستخدام:** لرفـع شخـص مطـور مسـاعـد معـك بالبـوت**
 
-๏ **Perintah:** `delsudo`
-◉ **Keterangan:** Hapus Pengguna Sudo dengan membalas ke pengguna atau menggunakan <spasi> userid yang terpisah
+๏  `تنزيل مطور`
+◉ **الاستخدام:** لتنزيل الشخـص مطـور مسـاعـد مـن البـوت**
 
-๏ **Perintah:** `listsudo`
-◉ **Keterangan:** Daftar semua pengguna sudo.
+๏  `المطورين`
+◉ **الاستخدام:** لعرض قائمة المطورين معك في البوت الخاص بك**.
 """
 
 from Ayra._misc import sudoers
@@ -23,7 +23,7 @@ from telethon.tl.types import User
 from . import ayra_bot, ayra_cmd, get_string, inline_mention, udB
 
 
-@ayra_cmd(pattern="addsudo( (.*)|$)", fullsudo=False)
+@ayra_cmd(pattern="رفع مطور( (.*)|$)", fullsudo=False)
 async def _(ayra):
     inputs = ayra.pattern_match.group(1).strip()
     if ayra.reply_to_msg_id:
@@ -53,17 +53,17 @@ async def _(ayra):
     if id == ayra_bot.uid:
         mmm = get_string("sudo_2")
     elif id in sudoers():
-        mmm = f"{name} `sudah menjadi Pengguna SUDO ...`"
+        mmm = f"{name} `تم اضافته مطور مسبقا...`"
     else:
         udB.set_key("SUDO", "True")
         key = sudoers()
         key.append(id)
         udB.set_key("SUDOS", key)
-        mmm = f"**Ditambahkan** {name} **sebagai Pengguna SUDO**"
+        mmm = f"**تم المستخدم** {name} **مطور بنجاح**"
     await ayra.eor(mmm, time=5)
 
 
-@ayra_cmd(pattern="delsudo( (.*)|$)", fullsudo=False)
+@ayra_cmd(pattern="تنزيل مطور( (.*)|$)", fullsudo=False)
 async def _(ayra):
     inputs = ayra.pattern_match.group(1).strip()
     if ayra.reply_to_msg_id:
@@ -89,17 +89,17 @@ async def _(ayra):
         return await ayra.eor(get_string("sudo_1"), time=5)
     name = inline_mention(name) if name else f"`{id}`"
     if id not in sudoers():
-        mmm = f"{name} `bukan Pengguna SUDO ...`"
+        mmm = f"{name} `تم ازالة مسبقا...`"
     else:
         key = sudoers()
         key.remove(id)
         udB.set_key("SUDOS", key)
-        mmm = f"**DIHAPUS** {name} **dari Pengguna SUDO(s)**"
+        mmm = f"**تم ازالة المستخدم** {name} **من قائمة المطورين**"
     await ayra.eor(mmm, time=5)
 
 
 @ayra_cmd(
-    pattern="listsudo$",
+    pattern="المطورين$",
 )
 async def _(ayra):
     sudos = sudoers()
@@ -119,5 +119,5 @@ async def _(ayra):
     if not m:
         m = "[False](https://graph.org/Ayra-11-29)"
     return await ayra.eor(
-        f"**SUDO MODE : {m}\n\nList of SUDO Users :**\n{msg}", link_preview=False
+        f"** {m}\n\nقائمة  المطورين:**\n{msg}", link_preview=False
     )

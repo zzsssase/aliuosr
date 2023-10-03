@@ -6,55 +6,41 @@
 # <https://www.github.com/senpai80/Ayra/blob/main/LICENSE/>.
 
 """
-✘ **Bantuan Untuk Music**
+~ **اوامـر الميوزك**
 
-๏ **Perintah:** `rejoin`
-◉ **Keterangan:** Gunakan ini Jika saat memutar musik patah-patah.
+๏  `انضمام`
+◉ **الاستخدام:**يتم استخدام الامر اذا كانت اغنيه فيها تقطيع.
 
-๏ **Perintah:** `skip`
-◉ **Keterangan:** Lewati trek lagu saat ini.
+๏  `تخطي`
+◉ **الاستخدام:** يستخدم لتخطي تشغيل الاغنيه**.
 
-๏ **Perintah:** `play` <berikan judul/balas audio>
-◉ **Keterangan:** Putar Lagu atau Balas Ke Audio.
+๏  `تشغيل` 
+◉ **الاستخدام:** تشغيل + اسم الاغنية او بالرد على ملف صوتي**.
 
-๏ **Perintah:** `ytplaylist` <berikan link playlist yt>
-◉ **Keterangan:** Putar Lagu Playlist Youtube.
+๏  `فيديو`
+◉ **الاستخدام:** فيديو + اسم الاغنية او بالرد على مقطع فيديو**.
 
-๏ **Perintah:** `vplay` <berikan judul/balas video>
-◉ **Keterangan:** Putar Video Dengan Judul atau Balas File.
+๏ `مؤقت`
+◉ **الاستخدام:** لكتم الاغنيه مؤقت.
 
-๏ **Perintah:** `mutevc`
-◉ **Keterangan:** Bisukan musik.
+๏ ** `ايقاف مؤقت`
+◉ **الاستخدام:**يستخدم لايقاف تشغيل الاغنيه مؤقت**.
 
-๏ **Perintah:** `pausevc`
-◉ **Keterangan:** Pause musik.
+๏ `الغاء مؤقت`
+◉ **الاستخدام:**يستخدم لألغاء كتم عن الاغنية**.
 
-๏ **Perintah:** `unmutevc`
-◉ **Keterangan:** Unmute musik.
+๏ `استئناف`
+◉ **الاستخدام:** يستخدم لاستئناف التشغيل**.
 
-๏ **Perintah:** `resumevc`
-◉ **Keterangan:** Resume musik.
+๏ `رفع معنمد`
+◉ **الاستخدام:** يستخدم لاضافة الشخص لقائمة المعتمدين لتشغيل الاغاني.
 
-๏ **Perintah:** `addauth`
-◉ **Keterangan:** Tambahkan izin pengguna lain untuk memutar.
+๏ `ازاله المعتمد`
+◉ **الاستخدام:** يستخدم لازالة صلاحيات المستخدم المعتمد**.
 
-๏ **Perintah:** `remauth`
-◉ **Keterangan:** Hapus izin pengguna .
+๏  `المعتمدين`
+◉ **الاستخدام:** يستخدم لعرض قائمة المستخدمين المعتمدين**.
 
-๏ **Perintah:** `listauth`
-◉ **Keterangan:** Daftar pengguna yang diizinkan.
-
-๏ **Perintah:** `vcaccess` <id pengguna/balas pengguna>
-◉ **Keterangan:** Tambahkan izin pengguna lain untuk memutar.
-
-๏ **Perintah:** `rmvcaccess`
-◉ **Keterangan:** Hapus izin pengguna .
-
-๏ **Perintah:** `listvcaccess`
-◉ **Keterangan:** Daftar pengguna yang diizinkan.
-
-๏ **Perintah:** `listplay`
-◉ **Keterangan:** Daftar pengguna yang diizinkan.
 
 """
 
@@ -74,7 +60,7 @@ from . import *
 from ._music import *
 
 
-@vc_asst("play")
+@vc_asst("تشغيل")
 async def play_music_(event):
     if "playfrom" in event.text.split()[0]:
         return  # For PlayFrom Conflict
@@ -160,7 +146,7 @@ async def play_music_(event):
         )
 
 
-@vc_asst("mutevc")
+@vc_asst("مؤقت")
 async def mute(event):
     if len(event.text.split()) > 1:
         chat = event.text.split()[1]
@@ -175,7 +161,7 @@ async def mute(event):
     await event.eor(get_string("vcbot_12"))
 
 
-@vc_asst("unmutevc")
+@vc_asst("الغاء مؤقت")
 async def unmute(event):
     if len(event.text.split()) > 1:
         chat = event.text.split()[1]
@@ -190,7 +176,7 @@ async def unmute(event):
     await event.eor("`Menyalakan pemutaran di obrolan ini.`")
 
 
-@vc_asst("pausevc")
+@vc_asst("ايقاف مؤقت")
 async def pauser(event):
     if len(event.text.split()) > 1:
         chat = event.text.split()[1]
@@ -205,7 +191,7 @@ async def pauser(event):
     await event.eor(get_string("vcbot_14"))
 
 
-@vc_asst("resumevc")
+@vc_asst("استئناف")
 async def resumer(event):
     if len(event.text.split()) > 1:
         chat = event.text.split()[1]
@@ -220,7 +206,7 @@ async def resumer(event):
     await event.eor(get_string("vcbot_13"))
 
 
-@vc_asst("addauth", from_users=owner_and_sudos(), vc_auth=False)
+@vc_asst("رفع معتمد", from_users=owner_and_sudos(), vc_auth=False)
 async def auth_group(event):
     try:
         key = event.text.split(" ", maxsplit=1)[1]
@@ -241,7 +227,7 @@ async def auth_group(event):
     )
 
 
-@vc_asst("remauth", from_users=owner_and_sudos(), vc_auth=False)
+@vc_asst("ازاله معتمد", from_users=owner_and_sudos(), vc_auth=False)
 async def auth_group(event):
     chat = event.chat_id
     key = udB.get_key("VC_AUTH_GROUPS") or {}
@@ -272,7 +258,7 @@ async def listVc(e):
     await e.eor(text, parse_mode="html")
 
 
-@vc_asst("listplay")
+@vc_asst("المعتمدين")
 async def lstqueue(event):
     if len(event.text.split()) > 1:
         chat = event.text.split()[1]
@@ -288,7 +274,7 @@ async def lstqueue(event):
         return await event.eor(get_string("vcbot_21"))
 
 
-@vc_asst("rejoin")
+@vc_asst("انضمام")
 async def rejoiner(event):
     if len(event.text.split()) > 1:
         chat = event.text.split()[1]
@@ -306,7 +292,7 @@ async def rejoiner(event):
     await event.eor(get_string("vcbot_5"))
 
 
-@vc_asst("skip")
+@vc_asst("تخطي")
 async def skipper(event):
     if len(event.text.split()) > 1:
         chat = event.text.split()[1]
@@ -320,7 +306,7 @@ async def skipper(event):
     await aySongs.play_from_queue()
 
 
-@vc_asst("vplay")
+@vc_asst("فيديو")
 async def video_c(event):
     xx = await event.eor(get_string("com_1"))
     chat = event.chat_id

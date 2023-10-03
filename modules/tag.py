@@ -5,13 +5,13 @@
 # PLease read the GNU Affero General Public License in
 # <https://www.github.com/senpai80/Ayra/blob/main/LICENSE/>.
 """
-✘ **Bantuan Untuk Tag All**
+ **اوامــر المنشن**
 
-๏ **Perintah:** `all` <berikan pesan>
-◉ **Keterangan:** Tandai Anggota Grup Dengan Pesan/Tanpa Pesan
+๏ ** `منشن` 
+◉ **الاستخدام:** يستخدم لعمل منشن للأعضاء دخل المجموعة**
 
-๏ **Perintah:** `batal`
-◉ **Keterangan:** Untuk membatalkan tag all
+๏ `الغاء منشن`
+◉ **الاستخدام:** يستخدم لايقاف المنشن داخل المجموعة**
 """
 
 import asyncio
@@ -38,13 +38,13 @@ async def _(event):
     )
 
 
-@ayra_cmd(pattern="(b|B)atal(?: |$)")
+@ayra_cmd(pattern="الغاء منشن(?: |$)")
 async def cancel_all(event):
     FlagContainer.is_active = False
     await event.reply("✅ Berhasil membatalkan tagall.")
 
 
-@ayra_cmd(pattern="[aA][lL][lL](?: |$)(.*)")
+@ayra_cmd(pattern="منشن(?: |$)(.*)")
 async def _(event):
     if event.fwd_from or FlagContainer.is_active:
         return
